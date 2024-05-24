@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import {
+  CssBaseline,
+  GlobalStyles,
+  ThemeProvider,
+  colors,
+} from "@mui/material";
+import { themes } from "./theme";
+import Layout from "./components/layout";
+import { theme } from "./theme/theme";
 
 function App() {
+  const globalStyles = (theme) => ({
+    html: {
+      height: "100%",
+    },
+    body: {
+      backgroundColor: theme.palette.primary,
+      color: theme.palette.common.white,
+      height: "100%",
+    },
+    "#root": { height: "100%" },
+  });
+  console.log(theme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ThemeProvider theme={themes}>
+        <CssBaseline />
+        <GlobalStyles styles={globalStyles} />
+        <Layout />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
