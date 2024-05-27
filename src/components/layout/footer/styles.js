@@ -2,7 +2,7 @@ import { Stack, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const Root = styled(Stack)(({ theme }) => ({
-  padding: theme.spacing(0, 39),
+  padding: theme.spacing(0, 2),
 }));
 
 export const ImgLogo = styled("img")(({ theme }) => ({

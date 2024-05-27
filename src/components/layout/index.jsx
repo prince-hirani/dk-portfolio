@@ -1,7 +1,7 @@
 import { Stack } from "@mui/system";
 import { Root } from "./styles";
 import Header from "./header";
-import Footer from "./Footer";
+import Footer from "./footer";
 import Pages from "../../pages";
 
 function Layout() {
