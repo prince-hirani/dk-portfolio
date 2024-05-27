@@ -1,10 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import {
-  CssBaseline,
-  GlobalStyles,
-  ThemeProvider,
-  colors,
-} from "@mui/material";
+import { CssBaseline, GlobalStyles, ThemeProvider } from "@mui/material";
 import { themes } from "./theme";
 import Layout from "./components/layout";
 import { theme } from "./theme/theme";
@@ -15,7 +10,7 @@ function App() {
       height: "100%",
     },
     body: {
-      backgroundColor: theme.palette.primary,
+      backgroundColor: theme.palette.primary["main"],
       color: theme.palette.common.white,
       height: "100%",
     },
