@@ -9,6 +9,7 @@ export const Img = styled("img")(({ theme }) => ({
   borderRadius: "8px",
   aspectRatio: 1.4,
 }));
+
 export const StyledButton = styled(Button)(({ theme }) => ({
   borderColor: theme.palette.grey[700],
   borderRadius: "50px",

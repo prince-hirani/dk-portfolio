@@ -62,13 +62,14 @@ function MyWork() {
         ))}
       </GridContainer>
       <Stack alignItems="flex-end">
-        <StyledButton variant="outlined">
-          <Stack direction="row" gap={1} alignItems="center">
-            <ShowMoreBtn />
-            <Typography variant="body6" color={themes.palette.common.white}>
-              Show more
-            </Typography>
-          </Stack>
+        <StyledButton
+          variant="outlined"
+          size="large"
+          startIcon={<ShowMoreBtn />}
+        >
+          <Typography variant="body6" color={themes.palette.common.white}>
+            Show more
+          </Typography>
         </StyledButton>
       </Stack>
     </Root>

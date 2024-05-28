@@ -12,23 +12,17 @@ function SelectedWorkCard({ image, projectName, language, platform }) {
         alignItems="flex-start"
       >
         <Stack gap={2}>
-          <Stack>
-            <Typography variant="title6">{projectName}</Typography>
-          </Stack>
+          <Typography variant="title6">{projectName}</Typography>
           <Stack direction="row" gap={3}>
-            <Stack>
-              <Typography variant="body5" color={themes.palette.grey[700]}>
-                {language}
-              </Typography>
-            </Stack>
-            <Stack>
-              <Typography variant="body5" color={themes.palette.grey[700]}>
-                {platform}
-              </Typography>
-            </Stack>
+            <Typography variant="body5" color={themes.palette.grey[700]}>
+              {language}
+            </Typography>
+            <Typography variant="body5" color={themes.palette.grey[700]}>
+              {platform}
+            </Typography>
           </Stack>
         </Stack>
-        <StyledButton variant="outlined" type="button" align>
+        <StyledButton variant="outlined">
           <Typography variant="body6" color={themes.palette.common.white}>
             2024
           </Typography>
