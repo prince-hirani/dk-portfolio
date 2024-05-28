@@ -1,5 +1,11 @@
+import WorkProcess from "../../components/WorkProcess";
+
 function Home() {
-  return <div>Home Page</div>;
+  return (
+    <div>
+      <WorkProcess />
+    </div>
+  );
 }
 
 export default Home;
