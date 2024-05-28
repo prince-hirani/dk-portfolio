@@ -1,5 +1,5 @@
 import { Button, Stack, styled } from "@mui/material";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Root = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(2.5, 2),
@@ -9,14 +9,15 @@ export const ImgLogo = styled("img")(({ theme }) => ({
   cursor: "pointer",
 }));
 
-export const StyledLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.grey[900],
+export const StyledLink = styled(NavLink)(({ theme }) => ({
+  color: theme.palette.grey[500],
   textDecoration: "none",
   cursor: "pointer",
   padding: theme.spacing(1, 2.25),
+  borderRadius: "50px",
 
   "&.active": {
-    color: theme.palette.grey[500],
+    backgroundColor: theme.palette.grey[900],
   },
 }));
 
@@ -27,7 +28,7 @@ export const LinksBody = styled(Stack)(({ theme }) => ({
 }));
 export const StlyedButton = styled(Button)(({ theme }) => ({
   cursor: "pointer",
-  backgroundColor: theme.palette.grey[700],
+  backgroundColor: theme.palette.grey[900],
   borderRadius: "8px",
   padding: theme.spacing(2, 3.75),
 }));

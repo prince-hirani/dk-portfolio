@@ -12,41 +12,36 @@ const links = [
 
 function Header({ active }) {
   return (
-    <Root direction="row" justifyContent="space-between">
+    <Root direction="row" alignItems="center" justifyContent="space-between">
       <Link to="/">
         <ImgLogo src={Logo} />
       </Link>
 
-      <LinksBody>
-        <Stack direction="row" gap={1}>
-          {links.map((link, index) => {
-            return (
-              <StyledLink
-                key={index}
-                to={link.path}
-                className={clsx({
-                  active: link.label.toLowerCase() === active,
-                })}
-              >
-                {link.label}
-              </StyledLink>
-            );
-          })}
-        </Stack>
+      <LinksBody direction="row" gap={1}>
+        {links.map((link, index) => {
+          return (
+            <StyledLink
+              key={index}
+              to={link.path}
+              className={clsx({
+                active: link.label.toLowerCase() === active,
+              })}
+            >
+              {link.label}
+            </StyledLink>
+          );
+        })}
       </LinksBody>
-      <Stack>
-        <StlyedButton variant="md">
-          <GreenDot />
-          <Typography
-            pl={0.75}
-            fontSize="0.875rem"
-            fontWeight="500"
-            lineHeight="18.2px"
-          >
-            Contact me
-          </Typography>
-        </StlyedButton>
-      </Stack>
+      <StlyedButton variant="md" startIcon={<GreenDot />}>
+        <Typography
+          pl={0.75}
+          fontSize="0.875rem"
+          fontWeight="500"
+          lineHeight="18.2px"
+        >
+          Contact me
+        </Typography>
+      </StlyedButton>
     </Root>
   );
 }
