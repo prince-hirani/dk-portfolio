@@ -10,7 +10,7 @@ function App() {
       height: "100%",
     },
     body: {
-      backgroundColor: theme.palette.primary[500],
+      backgroundColor: theme.palette.primary["main"],
       color: theme.palette.common.white,
       height: "100%",
     },

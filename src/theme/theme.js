@@ -1,6 +1,6 @@
 export const theme = {
   palette: {
-    primary: { 500: "#0A0A0A" },
+    primary: { main: "#0A0A0A" },
     gray: {
       50: "#0f0f0f",
       100: "#1e1e1e",
