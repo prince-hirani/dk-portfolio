@@ -1,5 +1,7 @@
+import AskedQuestions from "../../components/askedQuestions";
+
 function AboutMe() {
-  return <div>About-Us page</div>;
+  return <AskedQuestions />;
 }
 
 export default AboutMe;
