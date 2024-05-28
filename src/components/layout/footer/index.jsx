@@ -17,28 +17,20 @@ function Footer() {
     <Root>
       <Stack gap={6}>
         <Stack gap={5}>
-          <Stack>
-            <Link to="/">
-              <ImgLogo src={Logo} />
-            </Link>
-          </Stack>
+          <Link to="/">
+            <ImgLogo src={Logo} />
+          </Link>
           <Stack direction="row" justifyContent="space-between">
             <Stack gap={5}>
               <Stack gap={1}>
-                <Stack>
-                  <Typography variant="body4">Address: </Typography>
-                </Stack>
-                <Stack>
-                  <Typography variant="body3" color={themes.palette.grey[700]}>
-                    Level 1, 12 Sample St, Sydney NSW 2000
-                  </Typography>
-                </Stack>
+                <Typography variant="body4">Address: </Typography>
+                <Typography variant="body3" color={themes.palette.grey[700]}>
+                  Level 1, 12 Sample St, Sydney NSW 2000
+                </Typography>
               </Stack>
 
               <Stack gap={1}>
-                <Stack>
-                  <Typography variant="body4">Contact:</Typography>
-                </Stack>
+                <Typography variant="body4">Contact:</Typography>
                 <Stack>
                   <Typography variant="body3" color={themes.palette.grey[700]}>
                     1800 123 4567
@@ -87,30 +79,24 @@ function Footer() {
             </Typography>
           </Stack>
           <Stack direction="row" gap={2}>
-            <StyledLink>
-              <Stack direction="row" gap={1}>
-                <StarIconBtn />
-                <Typography variant="body7" color={themes.palette.grey[700]}>
-                  Privacy Policy
-                </Typography>
-              </Stack>
-            </StyledLink>
-            <StyledLink>
-              <Stack direction="row" gap={1}>
-                <StarIconBtn />
-                <Typography variant="body7" color={themes.palette.grey[700]}>
-                  Terms of Service
-                </Typography>
-              </Stack>
-            </StyledLink>
-            <StyledLink>
-              <Stack direction="row" gap={1}>
-                <StarIconBtn />
-                <Typography variant="body7" color={themes.palette.grey[700]}>
-                  Cookies Settings
-                </Typography>
-              </Stack>
-            </StyledLink>
+            <Stack direction="row" gap={1}>
+              <StarIconBtn />
+              <Typography variant="body7" color={themes.palette.grey[700]}>
+                Privacy Policy
+              </Typography>
+            </Stack>
+            <Stack direction="row" gap={1}>
+              <StarIconBtn />
+              <Typography variant="body7" color={themes.palette.grey[700]}>
+                Terms of Service
+              </Typography>
+            </Stack>
+            <Stack direction="row" gap={1}>
+              <StarIconBtn />
+              <Typography variant="body7" color={themes.palette.grey[700]}>
+                Cookies Settings
+              </Typography>
+            </Stack>
           </Stack>
         </Divider>
       </Stack>
