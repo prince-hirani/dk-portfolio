@@ -1,8 +1,16 @@
 import { Link, Stack, Typography } from "@mui/material";
-import { ImgLogo, LinksBody, Root, StlyedButton, StyledLink } from "./styles";
+import {
+  ButtonStyledLink,
+  ImgLogo,
+  LinksBody,
+  Root,
+  StlyedButton,
+  StyledLink,
+} from "./styles";
 import Logo from "../../../assets/icons/logo.svg";
 import { ReactComponent as GreenDot } from "../../../assets/icons/green-dot.svg";
 import clsx from "clsx";
+import { NavLink } from "react-router-dom";
 
 const links = [
   { label: "Home", path: "/" },
@@ -13,9 +21,9 @@ const links = [
 function Header({ active }) {
   return (
     <Root direction="row" alignItems="center" justifyContent="space-between">
-      <Link to="/">
+      <NavLink to="/">
         <ImgLogo src={Logo} />
-      </Link>
+      </NavLink>
 
       <LinksBody direction="row" gap={1}>
         {links.map((link, index) => {
@@ -32,16 +40,18 @@ function Header({ active }) {
           );
         })}
       </LinksBody>
-      <StlyedButton variant="md" startIcon={<GreenDot />}>
-        <Typography
-          pl={0.75}
-          fontSize="0.875rem"
-          fontWeight="500"
-          lineHeight="18.2px"
-        >
-          Contact me
-        </Typography>
-      </StlyedButton>
+      <ButtonStyledLink to="contact-me">
+        <StlyedButton variant="md" startIcon={<GreenDot />}>
+          <Typography
+            pl={0.75}
+            fontSize="0.875rem"
+            fontWeight="500"
+            lineHeight="18.2px"
+          >
+            Contact me
+          </Typography>
+        </StlyedButton>
+      </ButtonStyledLink>
     </Root>
   );
 }
