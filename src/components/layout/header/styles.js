@@ -31,4 +31,14 @@ export const StlyedButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.grey[900],
   borderRadius: "8px",
   padding: theme.spacing(2, 3.75),
+  "&:hover": {
+    backgroundColor: theme.palette.grey[700],
+  },
+}));
+
+export const ButtonStyledLink = styled(NavLink)(({ theme }) => ({
+  background: "none",
+  textDecoration: "none",
+  border: "none",
+  color: theme.palette.grey[500],
 }));
